@@ -2,6 +2,7 @@ from unittest import TestCase
 
 from dominio import Avaliador, Lance, Leilao, Usuario
 
+
 class TestAvaliador(TestCase):
 
     def setUp(self):
@@ -33,6 +34,7 @@ class TestAvaliador(TestCase):
         self.leilao.propoe(self.lance_do_gui) 
         self.assertEqual(150.0, self.leilao.menor_lance) 
         self.assertEqual(150.0, self.leilao.maior_lance) 
+    
     def test_deve_retornar_o_maior_e_o_menor_valor_quando_o_leilao_tiver_tres_lances(self):
          yuri = Usuario('Yuri') 
          lance_do_yuri = Lance(yuri, 100.0) 
