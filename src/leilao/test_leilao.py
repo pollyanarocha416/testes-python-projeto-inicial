@@ -66,7 +66,7 @@ class TestLeilao(TestCase):
         self.assertEqual(2, quatidade_de_lances_recebido)
     
     def test_nao_deve_permitir_propor_lance_caso_o_usuario_seja_o_mesmo(self):
-        lance_do_gui200 = Lance(self.gui, 200)
+        lance_do_gui200 = Lance(self.gui, 200.0)
 
         self.leilao.propoe(self.lance_do_gui)
         self.leilao.propoe(lance_do_gui200)
@@ -74,4 +74,3 @@ class TestLeilao(TestCase):
         quantidade_de_lances_recebido = len(self.leilao.lances)
 
         self.assertEqual(1, quantidade_de_lances_recebido)
-        
